@@ -1,0 +1,31 @@
+---
+title: "watienza_HW_8"
+author: "William Atienza"
+date: "March 17, 2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+dat <- read.table("Deaths_1x1.txt", skip = 2, header = TRUE )
+
+```
+
+# Finland
+###Finland, or the Republic of Finland, is a Nordic country in Northern Europe and is nestled between Sweden to the West and Russia to the East. The Capital is Helsinki. Finland has a population of 5.52 million as of July 2019, with most of them living in the central and southern region of the coutnry. Internationally, Finland is recognized as one of the happiest countries in the world, in part due to their progressive social welfare government that provides universal healthcare and education, in addition to fair working wages and elderly care. Finland is also a top performer in education, economic competetiveness, civil liberties, quality of life, and human development. Sauna is also a really big part of their culture, with it being rumore that Finland was able to avoid open war with Russia upon the Finnish prime minster inviting a Russian diplomat to discuss peace agreements while in a sauna. Overall, quality and longevity of life is strong in modern Finland
+
+###We can use information from the Human Mortality Database (HMD) which were created by Berekeley people in order to provide detailed mortaliyt and population data to researchers, students, journalists, policy analists, and "others interseted in the hisotry of human longevity". According to the webiste, HMD provides open and international access to the data, containing populationa nd mortality data for 41 countries, one of which includes Finland. For this really short paper, we will be reviewing some raw data on Finland's mortality (death) rates that extends from the year 1878 to 2018. 
+
+###The data itself is comprised of 5 variables and 15,652 observations. Running diagonally left to right, the variables include Year, Age, Sex(Female), Sex(Male), and Total. In its raw form, there is an individual row for every year corresponding with an age (which fall in sequential order) from 0 to 110+ years old. After age reaches 110+, the year advances by one and the pattern repeats. The information is parsed by column of Female deaths, Male deaths and then a grand total of total Deaths for a particular age and year. 
+
+###Below is a radom graph generate that explores the frequency fo total death rates. Understandably, this histogram is very limited in the story that it tells. 
+
+
+```{r}
+hist(dat$Total)
+```
+
+
